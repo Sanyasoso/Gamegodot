@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var speed = 0.5
+@onready var anim = $playeranim
+
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("Walk_up"):
@@ -21,15 +23,15 @@ func _physics_process(delta: float) -> void:
 	move_and_collide(velocity)
 
 	if velocity.x == 0 and velocity.y == 0:
-		$playeranim.play("idle")
+		anim.play("idle")
 		
 	if Input.is_action_pressed("Walk_up"):
-		$playeranim.play("Walk_up")
+		anim.play("Walk_up")
 	elif Input.is_action_pressed("Walk_down"):
-		$playeranim.play("Walk_down")
+		anim.play("Walk_down")
 	if Input.is_action_pressed("Walk_right"):
-		$playeranim.play("Walk_right")
-		$playeranim.flip_h = false
+		anim.play("Walk_right")
+		anim.flip_h = false
 	elif Input.is_action_pressed("Walk_left"):
-		$playeranim.flip_h = true
-		$playeranim.play("Walk_right")
+		anim.flip_h = true
+		anim.play("Walk_right")
