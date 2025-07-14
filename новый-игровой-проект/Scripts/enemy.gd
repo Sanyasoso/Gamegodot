@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
 @onready var enemy = $"."
-var speed = 20
+var speed = 20 
 var Is_player = true
 var Player = null
 
