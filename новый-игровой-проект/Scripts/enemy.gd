@@ -2,7 +2,11 @@ extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
 @onready var enemy = $"."
+<<<<<<< HEAD
 @export var speed = 20
+=======
+var speed = 20 
+>>>>>>> 814d3bdb5d5af756974684d2a5fc024fb77d8d68
 var Is_player = true
 var Player = null
 
