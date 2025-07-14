@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var speed = 0.5
 @onready var anim = $playeranim
 
-
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("Walk_up"):
 		velocity.y = -1
@@ -17,7 +16,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = -1
 	else:
 		velocity.x = 0
-		
 		
 	velocity = velocity.normalized() * speed
 	move_and_collide(velocity)
